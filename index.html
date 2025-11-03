@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Face Catch Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="overlay">
+    <h1> Face Catch Game </h1>
+    <button id="startBtn">Start Game</button>
+    <button id="musicBtn">🎵 Music ON</button>
+  </div>
+
+  <div id="hud">
+    <span id="score">Score: 0</span>
+    <span id="lives">Lives: 3</span>
+  </div>
+
+  <canvas id="gameCanvas"></canvas>
+
+  <!-- 🎮 Game Over Popup -->
+  <div id="gameOverPopup">
+    <img src="mommyoni.gif" alt="Game Over GIF" id="gameOverGif">
+    <div id="gameOverBox">
+      <h2>GAME OVER 💔</h2>
+      <p id="finalScore">Your Score: 0</p>
+      <button id="restartBtn">Restart Game</button>
+    </div>
+  </div>
+
+  <audio id="bgMusic" src="background.mp3" loop></audio>
+  <script src="script.js"></script>
+</body>
+</html>
