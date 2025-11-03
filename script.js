@@ -27,7 +27,7 @@ let moveLeft = false;
 let moveRight = false;
 let musicOn = true;
 
-// 🖼️ Load face images
+// Load face images (eggrupts)
 const faces = [];
 for (let i = 1; i <= 5; i++) {
   const img = new Image();
@@ -35,7 +35,7 @@ for (let i = 1; i <= 5; i++) {
   faces.push(img);
 }
 
-// 🎵 Music toggle
+// Music toggle
 musicBtn.addEventListener("click", () => {
   if (musicOn) {
     bgMusic.pause();
@@ -47,7 +47,7 @@ musicBtn.addEventListener("click", () => {
   musicOn = !musicOn;
 });
 
-// 🕹️ Start Game
+// Start Game
 startBtn.addEventListener("click", startGame);
 restartBtn.addEventListener("click", () => {
   gameOverPopup.style.display = "none";
@@ -70,7 +70,7 @@ function startGame() {
   update();
 }
 
-// 🥚 Spawn Egg (Face)
+// Spawn Egg (Face)
 function spawnEgg() {
   if (!gameRunning) return;
   const img = faces[Math.floor(Math.random() * faces.length)];
@@ -78,7 +78,7 @@ function spawnEgg() {
   eggs.push({ x, y: -100, img });
 }
 
-// 🧍‍♂️ Catcher movement
+// Catcher movement
 document.addEventListener("keydown", (e) => {
   if (e.key === "ArrowLeft") moveLeft = true;
   if (e.key === "ArrowRight") moveRight = true;
@@ -88,7 +88,7 @@ document.addEventListener("keyup", (e) => {
   if (e.key === "ArrowRight") moveRight = false;
 });
 
-// 📱 Touch controls for mobile
+// Touch controls for mobile phones (tap tap)
 canvas.addEventListener("touchstart", (e) => {
   const touchX = e.touches[0].clientX;
   if (touchX < canvas.width / 2) moveLeft = true;
@@ -98,7 +98,7 @@ canvas.addEventListener("touchend", () => {
   moveLeft = moveRight = false;
 });
 
-// 🎯 Game Loop
+// Game Loop
 function update() {
   if (!gameRunning) return;
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -154,7 +154,7 @@ function update() {
   requestAnimationFrame(update);
 }
 
-// 💀 End Game
+// End of the Game
 function endGame() {
   gameRunning = false;
   clearInterval(eggInterval);

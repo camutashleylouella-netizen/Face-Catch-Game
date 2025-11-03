@@ -68,7 +68,7 @@ html, body {
   margin: 0 15px;
 }
 
-/* 🎮 GAME OVER POPUP */
+/* GAME OVER POPUP */
 #gameOverPopup {
   display: none;
   position: fixed;
